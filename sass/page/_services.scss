@@ -1,0 +1,87 @@
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6rem;
+
+    @include respond(sm) {
+        padding-top: 3rem;
+    }
+
+
+
+
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 135rem;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+
+
+.card {
+    background: linear-gradient(135deg, #FAFCFD 0%, #EAF0F7 100%);
+    text-align: center;
+    padding: 4rem;
+    box-shadow: 1px 1px 6px 4px rgba(#A7A7A7, .2);
+    outline: 2px solid rgba(167, 167, 167, 0.1);
+    outline-offset: 8px;
+    color: $color-1;
+    flex: 0 0 35rem;
+    text-align: center;
+    margin: 2rem;
+    
+
+    @include respond(md) {
+        flex: 0 0 30rem;
+    }
+ 
+
+    @include respond(sm) {
+        margin: 2rem 4rem;
+        flex: 1 1 100%;
+    }
+
+    h4 {
+        font-size: 2em;
+        font-weight: 300;
+        span {
+            text-transform: uppercase;
+            display: block;
+            font-weight: 700;
+        }
+        &::after {
+            content: "";
+            width: 15rem;
+            margin: 1rem auto;
+            height: 2px;
+            background-color: $color-2;
+            display: block;
+        }
+    }
+
+
+    p {
+        font-size: 1.8rem;
+        max-width: 25rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    hr {
+        width: 12rem;
+        border-color: #a7a7a72d;
+        margin: 2rem auto;
+    }
+}
+
+
+

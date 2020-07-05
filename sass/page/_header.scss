@@ -1,0 +1,179 @@
+.header {
+    min-height: calc( 85vh - var(--navHeight) );
+    margin-top: var(--navHeight);
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include respond(md) {
+        flex-direction: column;
+    }
+
+
+    .contact {
+        background: linear-gradient(146deg, #00E5FF 0%, #D500F9 100%);
+        flex: 1;
+
+
+        &__heading {
+                font-family: $font-primary;
+                font-size: 5rem;
+                font-weight: 700;
+                line-height: .8;
+                color: #fff;
+
+                @include respond(sm) {
+                    padding-bottom: 2rem ;
+                }
+            
+                
+                
+        }
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 10rem 2rem 4rem;
+            height: 100%;
+            max-width: 35rem;
+            margin: 0 auto;
+
+            @include respond(md) {
+                max-width: initial;
+                min-width: 45rem;
+            }
+
+            @include respond(md) {
+                padding: 5rem 2rem;
+                max-width: 50rem;
+            }
+
+            @include respond(sm) {
+                padding: 7rem 3rem;
+                max-width: 100%;
+            }
+
+        }
+
+      
+
+
+        .social {
+            min-width: 28rem;
+            margin-top: auto;
+
+            @include respond(md) {
+                display: none;
+            }
+
+            .hashtag {
+                font-size: 2.2rem;
+                text-align: center;
+
+                color: $color-light;
+            }
+
+            &__list {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+                li {
+                    flex: 1;
+                    svg {
+                        width: 2.8rem;
+                        height: 2.8rem;
+                    }
+                }
+            }
+        }
+
+    }
+    .content {
+        flex: 2;
+        background: linear-gradient(343deg, #DEE8F4 0%, #FDFDFE 100%);
+        padding: 8rem 10rem;
+
+        @include respond(lg) {
+            padding: 4rem 3rem;
+        }
+
+        @include respond(md) {
+             padding: 5rem;
+             text-align: right;
+        }
+
+        @include respond(sm) {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+    
+
+        // ICONS STYLES
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10rem;
+
+            @include respond(md) {
+                margin-top: 7rem;
+                justify-content: flex-start;
+            }
+
+            @include respond(sm) {
+                margin-top: 4rem;
+                justify-content: center;
+            }
+
+        &__box {
+            flex: 1 1 13rem;
+            text-align: center;
+            min-height: 13rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem;
+
+
+            @include respond(sm) {
+                padding: 3rem;
+                flex: 1 1 20rem;
+                min-height: 18rem;
+                margin: 1rem;
+            }
+
+         
+
+            
+            &:hover {
+                .icons__icon {
+                    transform: translateY(-1rem);
+                }
+
+                .icons__text {
+                    color: $color-3;
+                } 
+            }
+        }
+            &__icon {
+                width: 7rem;
+                height: 7rem;
+                transition: transform .2s ease-out;
+                }
+            &__text {
+                font-size: 1.8rem;
+                max-width: 20rem;
+                width: 100%;
+                transition: color .2s ease-out;
+                margin-top: 3rem;
+            }
+        }
+
+    }
+}

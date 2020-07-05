@@ -1,0 +1,179 @@
+
+.form {
+
+    &--inline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            flex: 1;
+        }
+    }
+    
+    &__group {
+        margin: 2rem 0;
+        color: $color-light;
+
+        &--checkbox {
+            margin-right: 5px;
+            text-align: right;
+        }
+
+
+    }
+    &__control {
+            font-size: 1.8rem;
+            border: 1px solid;
+            border-color: transparent;
+            border-radius: 9px;
+            padding: .7rem 1rem;
+            width: 100%;
+            font-family: inherit;
+            font-weight: 300;
+
+            &.error {
+                border-color: red;
+                &::placeholder {
+                    color: red;
+                }
+            }
+
+            
+    }
+    &__btn {
+        font-family: inherit;
+        background-color: $color-2;
+        color: inherit;
+        border: none;
+        font-weight: 300;
+        font-size: 3rem;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 30rem;
+        padding: .8rem 1rem;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:  background-color .2s ease-out;
+
+        @include respond(md) {
+            max-width: 100%;
+        }
+
+
+        &:hover {
+            background-color: darken($color-2, 2%);
+            svg {
+               animation: moveArrow .4s ease-out infinite alternate;
+            }
+        }
+
+        svg {
+            position: absolute;
+            left: 3rem;
+            width: 2rem;
+            height: 2rem;
+            transition: transform .2s ease-out;
+
+        }
+
+    }
+}
+
+.inline-form {
+    text-align: right;
+    color: $color-light;
+    padding: 0rem 5rem;
+
+@include respond(md) {
+    padding: 0 2rem;
+}
+
+    .form-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0 2rem;
+
+ 
+
+        @include respond(md) {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 5rem 2rem ;
+        }
+
+
+        .form__control {
+            max-width: 35rem;
+            @include respond(md) {
+                max-width: 100%;
+            }
+        }
+
+        .form-group {
+            flex: 1;
+            margin: 0 1rem;
+
+            @include respond(md) {
+               margin: 1rem;
+            }
+ 
+        }
+
+   
+        .form-btn {
+            font-family: inherit;
+            background-color: $color-2;
+            color: inherit;
+            border: none;
+            font-weight: 300;
+            font-size: 3rem;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 30rem;
+            padding: .8rem 1rem;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition:  background-color .2s ease-out;
+
+            @include respond(md) {
+                max-width: 100%;
+                padding:  1rem;
+             }
+            
+    
+            &:hover {
+                background-color: darken($color-2, 2%);
+                svg {
+                   animation: moveArrow .4s ease-out infinite alternate;
+                }
+            }
+    
+            svg {
+                position: absolute;
+                left: 3rem;
+                width: 2rem;
+                height: 2rem;
+                transition: transform .2s ease-out;
+            }
+            
+        }
+    }
+}
+
+
+
+@keyframes moveArrow {
+    to {
+        transform: translateX(-1rem) scale(1.2);
+        
+    }
+}
+

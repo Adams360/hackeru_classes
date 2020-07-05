@@ -1,0 +1,14 @@
+.about {
+    padding: 10rem 0 6rem;
+    text-align: center;
+    background: url(../../assets/img/pattern.svg);
+
+
+    @include respond(md) {
+        padding: 6rem 4rem;
+    }
+
+    .para {
+        margin: 2rem auto;
+    }
+}

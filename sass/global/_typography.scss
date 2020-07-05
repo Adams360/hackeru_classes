@@ -1,0 +1,33 @@
+.heading {
+    font-family: $font-primary;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: .8;
+
+        @include respond(sm) {
+            font-size: 6rem;
+        }
+    
+}
+
+.para {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    max-width: 85rem;
+    margin: 3rem 0;
+    &--lg {
+        font-size: 2.5rem;
+        @include respond(sm) {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+
+
+.light {
+    color: $color-light;
+}
+.dark {
+    color: $color-1;
+}

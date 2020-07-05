@@ -1,0 +1,20 @@
+.contact-us {
+    background-color: lightblue;
+    text-align: center;
+    padding: 7rem 0;
+
+    background: 
+                url(../../assets/img/contact-img.png);
+
+
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+                
+    @include respond(md) {
+        padding: 4rem 0;
+    }
+
+
+}

@@ -1,0 +1,81 @@
+.clients {
+    .heading {
+        text-align: center;
+    }
+
+
+
+
+    &__slide {
+        text-align: center;
+        padding: 2rem;
+        outline: 2px solid rgba(167, 167, 167, 0.1);
+        outline-offset: 8px;
+        box-shadow: 1px 1px 6px 4px rgba(#A7A7A7, .2);
+        width: 100%;
+        height: 100%;
+        background:  linear-gradient(135deg, #FAFCFD 0%, #EAF0F7 100%);
+
+    }
+    &__img {
+        max-width: 9rem;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 50%;
+        filter: drop-shadow(1px 2px 8px rgba(#333, .5));
+
+    }
+    &__name {
+        font-size: 3rem;
+        padding: 1rem 0;
+        font-weight: 300;
+        &::after {
+            content: "";
+            width: 7rem;
+            margin: 0 auto;
+            height: 1px;
+            background-color: $color-2;
+            display: block;
+            margin-top: .5rem;
+        }
+    }
+    &__text {
+        font-size: 2.1rem;
+        text-align: right;
+        font-weight: 300;
+        padding: 2rem 3rem;
+        @include respond(md) {
+            padding: 2rem 0rem;
+        text-align: center;
+
+        }
+
+    }
+}
+
+#swiper-scrollbar {
+
+    width: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(sm) {
+        width: 80%;
+    }
+}
+
+.swiper-scrollbar {
+    background-color: $color-dark;
+    height: 1px !important;
+}
+.swiper-scrollbar-drag {
+    background-color: $color-2;
+    height: 10px;
+    top: -5px;
+}
+
+
+
+.swiper-wrapper {
+    margin: 8rem 0;
+}

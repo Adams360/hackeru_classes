@@ -1,0 +1,12 @@
+{
+  "name": "hackeru_classes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass ./sass/main.scss ./assets/css/styles.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

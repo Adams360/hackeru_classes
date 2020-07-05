@@ -1,0 +1,89 @@
+.spec {
+    background: linear-gradient(114deg, #1565C0 0%, #4527A0 100%);
+    padding-top: 6rem;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 8rem;
+
+        @include respond(md) {
+            padding: 0 4rem;
+        }
+        
+        @include respond(sm) {
+            padding: 2rem;
+        }
+
+    }
+    
+    &__video-box {
+        flex: 1 1 45%;
+    }
+
+    &__video {
+        position: relative;
+         /* falls back to 16/9, but otherwise uses ratio from HTML */
+        padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
+        height: 0;
+
+    
+        
+
+        iframe {
+            position: absolute;
+            left: 0;
+            bottom: -80px;
+            width: 100%;
+            height: 100%;
+            
+            @include respond(lg) {
+                bottom: -100px;
+            }
+
+            @include respond(sm) {
+                bottom: -60px;
+            }
+
+         
+        }
+    }
+
+
+    &__list {
+        list-style-type: none;
+        color: $color-light;
+        padding: 17.8rem 10rem 5rem 0rem;
+        max-width: 56rem;
+        width: 100%;
+        @include respond(md) {
+            padding: 15rem 4rem;
+            padding-bottom: 3rem;
+        }
+
+        @include respond(sm) {
+            padding: 11rem 4rem;
+            padding-bottom: 1rem;
+
+        }
+        li {
+            font-weight: 300;
+            font-size: 1.9rem;
+            width: 100%;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            
+            &::before {
+                content: "\208A";
+                color: rgba(#fff, .4);
+                font-size: 4rem;
+                padding-left: 2rem;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+   
+}

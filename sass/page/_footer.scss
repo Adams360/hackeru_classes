@@ -1,0 +1,103 @@
+.footer {
+    background: linear-gradient(100deg, #3D5598 0%, #2A3963 100%);
+    padding: 6rem 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $color-light;
+
+    @include respond(lg) {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        text-align: center;
+        align-self: center;
+   
+        img {
+            max-width: 15rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__contact {
+        text-align: center;
+        padding: 0 6rem;
+
+        a {
+            display: block;
+            color: currentColor;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2rem;
+            
+    @include respond(lg) {
+        margin-top: 3rem;
+    }
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            margin-top: 1.5rem;
+            max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+            li {
+                flex: 1;
+                padding: 0 .7rem;
+             
+            }
+            svg { width: 2.2rem; height: 2.2rem; }
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(lg) {
+            text-align: center;
+             justify-content: center;
+             margin-top: 3rem;
+        }
+
+    }
+    // Single Box
+    &__box {
+        max-width: 20rem;
+        width: 100%;
+        margin: 0 2rem;
+        @include respond(lg) {
+            margin:  2rem;
+            flex: 0 0 30rem;
+        }
+
+        @include respond(sm) {
+            flex: 1 1 15rem;
+        }
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 300;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                display: block;
+                background-color: $color-2;
+                margin-top: .5rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            padding-top: 1rem;
+            font-weight: 300;
+
+        }
+    }
+}

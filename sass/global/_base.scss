@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include respond(sm) {
+        font-size: 50%;
+    }
+  
+}
+
+body {
+    direction: rtl;
+    font-family: $font-primary;
+    color: $color-1;
+    font-size: 1.6em;
+    line-height: 1;
+    background:  linear-gradient(343deg, #DEE8F4 0%, #FDFDFE 100%);
+
+}
+
+
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+.privacy-link {
+    color: #fff;
+}
